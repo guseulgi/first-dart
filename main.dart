@@ -5,7 +5,27 @@ void sayHello(String name) {
 
 String whatYourName(String name) => '안녕하세요 $name님!';
 
+String sayUserInfo({
+  // Named argument -> null safety 는 default value 로 해결!
+  String name = 'anon',
+  int age = 100,
+  String country = 'korea',
+}) {
+  return 'Name: $name / age: $age / country: $country';
+}
+
+String sayUserInfo2({
+  // Named argument -> null safety 는 required 사용
+  required String name,
+  required int age,
+  required String country,
+}) {
+  return 'Name: $name / age: $age / country: $country';
+}
+
 void main() {
+  print(sayUserInfo(name: 'Kim', age: 19));
+
   print('Hello!'); // 출력 함수
 
   String name = 'Kim'; // 명시적 타입 지정
