@@ -1,3 +1,10 @@
+// Function
+void sayHello(String name) {
+  print('안녕하세요 $name님!');
+}
+
+String whatYourName(String name) => '안녕하세요 $name님!';
+
 void main() {
   print('Hello!'); // 출력 함수
 
