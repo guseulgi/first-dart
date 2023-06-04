@@ -53,4 +53,11 @@ void main() {
     for (var friend in oldFriends) "$friend 👍",
   ];
   print(newFriends);
+
+  // Maps
+  Map<String, Object> player = {
+    'name': 'Kim',
+    'xp': 19.99,
+    'superpower': false,
+  };
 }
