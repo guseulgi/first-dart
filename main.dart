@@ -60,4 +60,11 @@ void main() {
     'xp': 19.99,
     'superpower': false,
   };
+
+  // Set
+  Set<String> names = {'Kim', 'Lee', 'Park'};
+  names.add('Lee');
+  names.add('Hui');
+  names.add('Lee');
+  print(names);
 }
