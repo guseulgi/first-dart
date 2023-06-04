@@ -23,7 +23,21 @@ String sayUserInfo2({
   return 'Name: $name / age: $age / country: $country';
 }
 
+String sayHalo(String name, int age, [String? country = 'KOREA']) =>
+    '제 이름은 $name이고 나이는 $age, 사는 곳은 $country입니다.';
+
+String capalizeName(String? name) {
+  // ?? : question question operator
+  // 좌항 ?? 우항 에서 좌항이 null 이면 우항이 return, 좌항이 null 이 아니면 좌항 return
+  return name?.toUpperCase() ?? 'ANON';
+}
+
 void main() {
+  String? book;
+  book ??= 'PROPAGANDA';
+
+  print(sayHalo('Kim', 20));
+
   print(sayUserInfo(name: 'Kim', age: 19));
 
   print('Hello!'); // 출력 함수
