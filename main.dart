@@ -32,7 +32,24 @@ String capalizeName(String? name) {
   return name?.toUpperCase() ?? 'ANON';
 }
 
+// Typedef
+typedef ListOfInts = List<int>;
+
+ListOfInts reversList(ListOfInts list) {
+  var reversedList = list.reversed;
+  return reversedList.toList();
+}
+
+typedef UserInfo = Map<String, String>;
+
+String takeMessage(UserInfo userInfo) {
+  return 'Hi ${userInfo['name']}!!!';
+}
+
 void main() {
+  print(reversList([1, 2, 3, 4, 5]));
+
+  // QQ equal operator
   String? book;
   book ??= 'PROPAGANDA';
 
