@@ -84,6 +84,15 @@ class CustomPlayer {
 }
 
 void main() {
+  var p4 = CustomPlayer(
+    name: 'N',
+    xp: 11,
+    team: 'white`',
+    age: 27,
+  )
+    ..age += 1 //Cascade Notation
+    ..xp = 22;
+
   // Named Constructor
   var p3 = CustomPlayer.createBluePlayer(
     name: 'nico',
