@@ -100,6 +100,35 @@ class User extends Human {
   void walk() {}
 }
 
+// 상속
+class Person {
+  final String name;
+  Person(this.name) {
+    print('Name : $name');
+  }
+
+  void sayHello() {
+    print('사람 : $name');
+  }
+}
+
+class SalesMan extends Person {
+  final String part;
+
+  SalesMan({
+    required this.part,
+    required String name,
+  }) : super(name);
+
+  @override
+  void sayHello() {
+    super.sayHello();
+    print('사람 -> 세일즈맨 $name');
+  }
+}
+
+// Mixins
+
 void main() {
   var p4 = CustomPlayer(
     name: 'N',
