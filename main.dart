@@ -46,6 +46,13 @@ String takeMessage(UserInfo userInfo) {
   return 'Hi ${userInfo['name']}!!!';
 }
 
+// Enum
+enum Team {
+  red,
+  white,
+  blue,
+}
+
 // Class
 class Player {
   final String name = 'nico';
@@ -57,7 +64,8 @@ class Player {
 }
 
 class CustomPlayer {
-  final String name, team;
+  final String name;
+  Team team;
   int xp, age;
 
   // Named Constructor Parameter
@@ -74,12 +82,12 @@ class CustomPlayer {
     required int age,
   })  : this.name = name,
         this.age = age,
-        this.team = 'blue',
+        this.team = Team.blue,
         this.xp = 0;
   CustomPlayer.createRedPlayer(String name, int age) //Positional
       : this.age = age,
         this.name = name,
-        this.team = 'red',
+        this.team = Team.blue,
         this.xp = 100;
 }
 
@@ -87,7 +95,7 @@ void main() {
   var p4 = CustomPlayer(
     name: 'N',
     xp: 11,
-    team: 'white`',
+    team: Team.white,
     age: 27,
   )
     ..age += 1 //Cascade Notation
@@ -103,13 +111,13 @@ void main() {
   CustomPlayer p1 = CustomPlayer(
     name: 'Kim',
     xp: 100,
-    team: 'Halo',
+    team: Team.red,
     age: 25,
   );
   var p2 = CustomPlayer(
     name: 'Lee',
     xp: 22,
-    team: 'Halo',
+    team: Team.white,
     age: 20,
   );
 
