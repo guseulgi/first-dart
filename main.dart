@@ -128,6 +128,23 @@ class SalesMan extends Person {
 }
 
 // Mixins
+mixin Strong {
+  final double strengthLevel = 1500.88;
+}
+
+mixin QuickRunner {
+  void runQuick() {
+    print('Runnn!');
+  }
+}
+
+mixin Tall {
+  final double height = 1.99;
+}
+
+class ExPlayer with Strong, QuickRunner {}
+
+class Ex2Palyer with Tall, Strong {}
 
 void main() {
   var p4 = CustomPlayer(
