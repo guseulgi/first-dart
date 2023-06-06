@@ -91,6 +91,15 @@ class CustomPlayer {
         this.xp = 100;
 }
 
+// Abstract class
+abstract class Human {
+  void walk();
+}
+
+class User extends Human {
+  void walk() {}
+}
+
 void main() {
   var p4 = CustomPlayer(
     name: 'N',
