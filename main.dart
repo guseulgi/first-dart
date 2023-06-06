@@ -57,16 +57,32 @@ class Player {
 }
 
 class CustomPlayer {
-  final String name;
-  int xp;
+  final String name, team;
+  int xp, age;
 
-  CustomPlayer(this.name, this.xp);
+  // Named Constructor Parameter
+  CustomPlayer({
+    required this.name,
+    required this.xp,
+    required this.team,
+    required this.age,
+  });
 }
 
 void main() {
   // 인자가 있는 클래스의 호출
-  CustomPlayer p1 = CustomPlayer('Kim', 100);
-  var p2 = CustomPlayer('Lee', 22);
+  CustomPlayer p1 = CustomPlayer(
+    name: 'Kim',
+    xp: 100,
+    team: 'Halo',
+    age: 25,
+  );
+  var p2 = CustomPlayer(
+    name: 'Lee',
+    xp: 22,
+    team: 'Halo',
+    age: 20,
+  );
 
   // 클래스의 호출 -> 인스턴스 생성
   var palyer = Player();
