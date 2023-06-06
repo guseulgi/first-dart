@@ -56,7 +56,18 @@ class Player {
   }
 }
 
+class CustomPlayer {
+  final String name;
+  int xp;
+
+  CustomPlayer(this.name, this.xp);
+}
+
 void main() {
+  // 인자가 있는 클래스의 호출
+  CustomPlayer p1 = CustomPlayer('Kim', 100);
+  var p2 = CustomPlayer('Lee', 22);
+
   // 클래스의 호출 -> 인스턴스 생성
   var palyer = Player();
 
