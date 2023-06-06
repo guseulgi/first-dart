@@ -67,9 +67,29 @@ class CustomPlayer {
     required this.team,
     required this.age,
   });
+
+  // Named Constuctor
+  CustomPlayer.createBluePlayer({
+    required String name,
+    required int age,
+  })  : this.name = name,
+        this.age = age,
+        this.team = 'blue',
+        this.xp = 0;
+  CustomPlayer.createRedPlayer(String name, int age) //Positional
+      : this.age = age,
+        this.name = name,
+        this.team = 'red',
+        this.xp = 100;
 }
 
 void main() {
+  // Named Constructor
+  var p3 = CustomPlayer.createBluePlayer(
+    name: 'nico',
+    age: 20,
+  );
+
   // 인자가 있는 클래스의 호출
   CustomPlayer p1 = CustomPlayer(
     name: 'Kim',
