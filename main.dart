@@ -46,7 +46,20 @@ String takeMessage(UserInfo userInfo) {
   return 'Hi ${userInfo['name']}!!!';
 }
 
+// Class
+class Player {
+  final String name = 'nico';
+  int xp = 22;
+
+  void sayHello() {
+    print('Hello, My name is $name'); // this.name OK
+  }
+}
+
 void main() {
+  // 클래스의 호출 -> 인스턴스 생성
+  var palyer = Player();
+
   print(reversList([1, 2, 3, 4, 5]));
 
   // QQ equal operator
